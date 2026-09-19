@@ -224,6 +224,21 @@ Two tables holding identical 50M rows with a different `ORDER BY`, plus a materi
 > The headline is rows read from `system.query_log`, not milliseconds, because wall time on a laptop flatters you. There is also a check that the view's totals match the raw table to the cent, since a fast wrong dashboard is worse than a slow one.
 
 </td></tr>
+<tr><td width="100%">
+
+#### [text-to-sql-guardrails](https://github.com/swapnatondapu7/text-to-sql-guardrails)
+
+<a href="https://github.com/swapnatondapu7/text-to-sql-guardrails"><img src="https://img.shields.io/badge/LLM-text--to--SQL-8A2BE2?style=flat-square"></a>
+<img src="https://img.shields.io/badge/sqlglot-parsed%2C%20not%20regex-blue?style=flat-square">
+<img src="https://img.shields.io/badge/18%2F20%20correct-0%2F10%20unsafe-2ea44f?style=flat-square">
+
+**Letting a model write SQL against a warehouse, safely.**
+
+Every analytics team is being asked for "ask your data a question" right now. The interesting part is not the model, it is what you put around it: the SQL is parsed with `sqlglot` and the tree inspected, because string matching fails on `'dropped_flag'` and on `--` comments.
+
+> Correctness is execution accuracy, comparing result sets against reference queries rather than SQL text. The failure worth reading: asked for a chargeback rate, the model wrote a **cross join** and returned **1.0 instead of 0.036**. No error, just a confident number wrong by 28x.
+
+</td></tr>
 </table>
 
 ---
