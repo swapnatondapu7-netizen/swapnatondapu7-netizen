@@ -138,12 +138,29 @@ So I built it the way it should be built: an incremental model that reprocesses 
 
 ---
 
-### GitHub
+### What I'm working on now
 
-<p align="center">
-  <img height="165" src="https://github-readme-stats.vercel.app/api?username=swapnatondapu7-netizen&show_icons=true&theme=tokyonight&hide_border=true&count_private=true">
-  <img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=swapnatondapu7-netizen&layout=compact&theme=tokyonight&hide_border=true&langs_count=6">
-</p>
+<table>
+<tr><td width="33%" valign="top" align="center">
+
+**Closing the dbt gap**
+
+Expressing the transformation, DAG and testing work I do by hand in dbt — models, snapshots and tests rather than three separate systems.
+
+</td><td width="33%" valign="top" align="center">
+
+**Streaming reconciliation**
+
+Taking the auth-vs-settlement problem upstream: event-time windows, watermarks, and what to do with the event that arrives late.
+
+</td><td width="33%" valign="top" align="center">
+
+**Data contracts**
+
+Tests that fail for the right reasons. A check that fires on correct data teaches people to ignore checks.
+
+</td></tr>
+</table>
 
 ---
 
