@@ -1,94 +1,155 @@
-# Hi there, I'm Swapna Tondapu 👋
+<h1 align="center">Hi, I'm Swapna 👋</h1>
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/swapnatondapu)
-[![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:swapnatondapu7@gmail.com)
-[![AWS Certified](https://img.shields.io/badge/AWS%20Certified%20Data%20Engineer-FF9900?style=for-the-badge&logo=amazonaws&logoColor=white)](https://aws.amazon.com/certification/certified-data-engineer-associate/)
+<p align="center">
+  <b>Data Engineer @ American Express</b> · Santa Clara, CA<br>
+  I keep the pipelines behind <b>~1M card transactions and ~8 TB a day</b> honest.
+</p>
 
-**Data Engineer @ American Express** — I build the batch and streaming pipelines behind card transactions: roughly **1M transactions and ~8 TB a day**.
-
-I care about the unglamorous half of data engineering — the part where a number has to be *the same* the second time you ask for it. Late-arriving data, idempotent reloads, reconciliation between systems that disagree, and tests that fail before a finance team finds the problem.
-
----
-
-## 👩‍💻 About Me
-
-🔭 Currently a **Data Engineer at American Express** (Palo Alto), working on authorization and settlement pipelines — Spark and Hive batch jobs, Kafka and Flink streams, orchestrated in Airflow and served through ClickHouse and Grafana.
-
-🎓 **MS in Business Analytics, Texas A&M University** (GPA 4.0)
-
-📜 **AWS Certified Data Engineer – Associate**
-
-🏢 Previously at **Johnson & Johnson Consumer Health** (data platform and quality tooling) and **JioSaavn**
-
-⚡ Things I've actually shipped:
-- Cut a daily merchant aggregation's runtime **~25%** by repartitioning skewed joins and tuning Spark SQL
-- Built Presto reconciliation checks that catch schema drift **before** it reaches downstream consumers
-- Maintain an **SCD2 merchant dimension** and incremental loads with late-arrival handling
-
-📫 Reach me at **swapnatondapu7@gmail.com**
+<p align="center">
+  <a href="https://linkedin.com/in/swapnatondapu"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
+  <a href="mailto:swapnatondapu7@gmail.com"><img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"></a>
+  <img src="https://img.shields.io/badge/AWS%20Certified-Data%20Engineer%20Associate-FF9900?style=for-the-badge&logo=amazonaws&logoColor=white" alt="AWS Certified">
+  <img src="https://img.shields.io/badge/Open%20to-Data%20%26%20Analytics%20Engineering-2ea44f?style=for-the-badge" alt="Open to work">
+</p>
 
 ---
 
-## 🛠 Tech Stack
+### 🙋‍♀️ A bit about me
 
-**Processing & Streaming**
+I fell into data engineering through the unglamorous door: someone asked why a number in a report changed overnight, and I went looking. Turned out a settlement had landed four days late and quietly rewrote a day everyone thought was finished.
 
-![Apache Spark](https://img.shields.io/badge/Apache%20Spark-E25A1C?style=for-the-badge&logo=apachespark&logoColor=white)
-![Kafka](https://img.shields.io/badge/Apache%20Kafka-231F20?style=for-the-badge&logo=apachekafka&logoColor=white)
-![Flink](https://img.shields.io/badge/Apache%20Flink-E6526F?style=for-the-badge&logo=apacheflink&logoColor=white)
-![Hive](https://img.shields.io/badge/Apache%20Hive-FDEE21?style=for-the-badge&logo=apachehive&logoColor=black)
+That's still the part of the job I like most. Not the dashboards — **the promise underneath them**. That the number is the same the second time you ask. That late data corrects itself instead of silently vanishing. That when two systems disagree, something tells you *before* the finance team does.
 
-**Orchestration & Transformation**
+Day to day at **American Express** that means Spark and Hive over card transactions, Kafka and Flink for authorization and settlement events, Airflow holding it together, and ClickHouse + Grafana at the front so people can actually see it.
 
-![Airflow](https://img.shields.io/badge/Apache%20Airflow-017CEE?style=for-the-badge&logo=apacheairflow&logoColor=white)
-![dbt](https://img.shields.io/badge/dbt-FF694B?style=for-the-badge&logo=dbt&logoColor=white)
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![SQL](https://img.shields.io/badge/SQL-4479A1?style=for-the-badge&logo=postgresql&logoColor=white)
+<br>
 
-**Warehouses & Query Engines**
+<table>
+<tr><td width="50%" valign="top">
 
-![BigQuery](https://img.shields.io/badge/BigQuery-669DF6?style=for-the-badge&logo=googlebigquery&logoColor=white)
-![Redshift](https://img.shields.io/badge/Redshift-8C4FFF?style=for-the-badge&logo=amazonredshift&logoColor=white)
-![Presto](https://img.shields.io/badge/Presto-5890FF?style=for-the-badge&logo=presto&logoColor=white)
-![ClickHouse](https://img.shields.io/badge/ClickHouse-FFCC01?style=for-the-badge&logo=clickhouse&logoColor=black)
-![Databricks](https://img.shields.io/badge/Databricks-FF3621?style=for-the-badge&logo=databricks&logoColor=white)
-![DuckDB](https://img.shields.io/badge/DuckDB-FFF000?style=for-the-badge&logo=duckdb&logoColor=black)
+**🎓 Education**
 
-**Cloud & Platform**
+`MS Business Analytics` — Texas A&M University
+GPA 4.0 · Aug 2022 – Dec 2023
 
-![AWS](https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazonaws&logoColor=white)
-![GCP](https://img.shields.io/badge/Google%20Cloud-4285F4?style=for-the-badge&logo=googlecloud&logoColor=white)
-![Delta Lake](https://img.shields.io/badge/Delta%20Lake-00ADD4?style=for-the-badge&logo=delta&logoColor=white)
-![Grafana](https://img.shields.io/badge/Grafana-F46800?style=for-the-badge&logo=grafana&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
-![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
+**📜 Certification**
 
----
+`AWS Certified Data Engineer – Associate`
 
-## 📊 Projects
+</td><td width="50%" valign="top">
 
-### 🏦 [merchant-settlement-dbt](https://github.com/swapnatondapu7-netizen/merchant-settlement-dbt)
+**💼 Experience**
 
-**Card authorization vs settlement reconciliation, modelled in dbt.**
+`Data Engineer` — **American Express**, Palo Alto
+Jan 2024 – present
 
-The same problem I work on at Amex, expressed in dbt: authorization and settlement arrive as two separate streams that don't line up one-to-one. Settlements land 0–9 days late, amounts drift (tips, partial captures), and some authorizations never settle at all.
+`Data Platform` — **Johnson & Johnson** Consumer Health
+Prior: **JioSaavn**
 
-- **Incremental model with a late-arrival window** — reprocesses a trailing window and replaces those days wholesale, so a settlement arriving 4 days late still corrects the day it belongs to. *Verified:* injecting a late settlement moved a already-written day from 4 open auths / $173.78 → 3 open auths / $187.87. A naive `where auth_date = current_date` incremental leaves that day under-reported forever.
-- **SCD2 merchant dimension** — risk tier and region change; overwriting silently re-attributes historical facts to current attributes, so a report run twice gives two answers.
-- **33 passing tests** — `unique`, `not_null`, `relationships` across both streams, plus a reconciliation invariant that I had to *correct*: it initially failed on 2 of 2,699 merchant-days that had only 3 and 13 transactions, where a single legitimate over-capture dominates the ratio. A test that fails on correct data trains people to ignore it, so it gained a volume floor.
-
-`dbt 1.12` · `DuckDB` · runs locally with no warehouse credentials
+</td></tr>
+</table>
 
 ---
 
-## 📈 GitHub Stats
+### 🔧 What I actually work on
 
-![Stats](https://github-readme-stats.vercel.app/api?username=swapnatondapu7-netizen&show_icons=true&theme=tokyonight&hide_border=true&count_private=true)
-![Streak](https://github-readme-streak-stats.herokuapp.com/?user=swapnatondapu7-netizen&theme=tokyonight&hide_border=true)
-![Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=swapnatondapu7-netizen&layout=compact&theme=tokyonight&hide_border=true)
+```mermaid
+flowchart LR
+    A["💳 Card<br/>transactions"] -->|Kafka| B["⚡ Flink<br/>auth + settlement<br/>streams"]
+    A -->|batch| C["🔥 Spark / Hive<br/>merchant aggregation<br/>~8 TB/day"]
+    B --> D["🗄️ Delta Lake<br/>/ warehouse"]
+    C --> D
+    D --> E["🔍 Presto<br/>reconciliation<br/>checks"]
+    D --> F["📊 ClickHouse<br/>+ Grafana"]
+    G["🌀 Airflow"] -.orchestrates.-> C
+    G -.orchestrates.-> E
+
+    style A fill:#2563eb,stroke:#1e40af,color:#fff
+    style B fill:#e6526f,stroke:#9f1239,color:#fff
+    style C fill:#e25a1c,stroke:#9a3412,color:#fff
+    style D fill:#00add4,stroke:#0e7490,color:#fff
+    style E fill:#5890ff,stroke:#1e40af,color:#fff
+    style F fill:#f46800,stroke:#9a3412,color:#fff
+    style G fill:#017cee,stroke:#1e40af,color:#fff
+```
+
+A few things I'm proud of rather than just familiar with:
+
+| | |
+|---|---|
+| ⚡ | Cut a daily merchant aggregation's runtime by **~25%** — the culprit was skewed joins, fixed by repartitioning and tuning the Spark SQL |
+| 🛡️ | Built the **Presto reconciliation checks** that catch schema drift before it reaches anyone downstream |
+| 🕰️ | Maintain an **SCD2 merchant dimension** and incremental loads that handle late-arriving settlements without rewriting history |
+
+---
+
+### 🧰 Tools I reach for
+
+<p>
+<img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white">
+<img src="https://img.shields.io/badge/SQL-4479A1?style=flat-square&logo=postgresql&logoColor=white">
+<img src="https://img.shields.io/badge/Apache%20Spark-E25A1C?style=flat-square&logo=apachespark&logoColor=white">
+<img src="https://img.shields.io/badge/Kafka-231F20?style=flat-square&logo=apachekafka&logoColor=white">
+<img src="https://img.shields.io/badge/Flink-E6526F?style=flat-square&logo=apacheflink&logoColor=white">
+<img src="https://img.shields.io/badge/Hive-FDEE21?style=flat-square&logo=apachehive&logoColor=black">
+</p>
+<p>
+<img src="https://img.shields.io/badge/Airflow-017CEE?style=flat-square&logo=apacheairflow&logoColor=white">
+<img src="https://img.shields.io/badge/dbt-FF694B?style=flat-square&logo=dbt&logoColor=white">
+<img src="https://img.shields.io/badge/Databricks-FF3621?style=flat-square&logo=databricks&logoColor=white">
+<img src="https://img.shields.io/badge/Delta%20Lake-00ADD4?style=flat-square&logo=delta&logoColor=white">
+</p>
+<p>
+<img src="https://img.shields.io/badge/BigQuery-669DF6?style=flat-square&logo=googlebigquery&logoColor=white">
+<img src="https://img.shields.io/badge/Redshift-8C4FFF?style=flat-square&logo=amazonredshift&logoColor=white">
+<img src="https://img.shields.io/badge/Presto-5890FF?style=flat-square&logo=presto&logoColor=white">
+<img src="https://img.shields.io/badge/ClickHouse-FFCC01?style=flat-square&logo=clickhouse&logoColor=black">
+<img src="https://img.shields.io/badge/DuckDB-FFF000?style=flat-square&logo=duckdb&logoColor=black">
+</p>
+<p>
+<img src="https://img.shields.io/badge/AWS-232F3E?style=flat-square&logo=amazonaws&logoColor=white">
+<img src="https://img.shields.io/badge/GCP-4285F4?style=flat-square&logo=googlecloud&logoColor=white">
+<img src="https://img.shields.io/badge/Grafana-F46800?style=flat-square&logo=grafana&logoColor=white">
+<img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white">
+<img src="https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white">
+</p>
+
+---
+
+### 📂 Projects
+
+<table>
+<tr><td width="100%">
+
+#### 🏦 [merchant-settlement-dbt](https://github.com/swapnatondapu7-netizen/merchant-settlement-dbt)
+
+<a href="https://github.com/swapnatondapu7-netizen/merchant-settlement-dbt"><img src="https://img.shields.io/badge/dbt-1.12-FF694B?style=flat-square&logo=dbt&logoColor=white"></a>
+<img src="https://img.shields.io/badge/DuckDB-local-FFF000?style=flat-square&logo=duckdb&logoColor=black">
+<img src="https://img.shields.io/badge/tests-33%20passing-2ea44f?style=flat-square">
+
+**The four-days-late settlement problem, modelled properly.**
+
+Authorizations and settlements arrive as two streams that refuse to line up — settlements land days late, amounts drift with tips and partial captures, and some authorizations never settle at all. Each one breaks a naive pipeline *quietly*, which is the dangerous kind.
+
+So I built it the way it should be built: an incremental model that reprocesses a trailing window instead of only today, an SCD2 snapshot so re-tiering a merchant doesn't rewrite last quarter, and tests that fail for the right reasons.
+
+> I proved the late-arrival logic rather than claiming it — injected a settlement arriving 4 days late and watched an already-written day correct itself from **4 open auths / $173.78 → 3 / $187.87**.
+
+</td></tr>
+</table>
+
+---
+
+### 📈 GitHub
+
+<p align="center">
+  <img height="165" src="https://github-readme-stats.vercel.app/api?username=swapnatondapu7-netizen&show_icons=true&theme=tokyonight&hide_border=true&count_private=true">
+  <img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=swapnatondapu7-netizen&layout=compact&theme=tokyonight&hide_border=true&langs_count=6">
+</p>
 
 ---
 
 <p align="center">
-  <i>Open to mid-level Data Engineer and Analytics Engineer roles across the US.</i>
+  <b>Open to mid-level Data Engineer / Analytics Engineer roles across the US.</b><br>
+  <sub>Currently in Santa Clara, happy to relocate · <a href="mailto:swapnatondapu7@gmail.com">swapnatondapu7@gmail.com</a></sub>
 </p>
