@@ -16,11 +16,11 @@
 
 ### A bit about me
 
-One morning someone asked me why a number in a report was different from the day before. Nobody had changed anything. I went digging and found the reason: a settlement had arrived four days late, and it belonged to a day we had already reported. So the old number was never wrong exactly, it was just incomplete, and nothing had told us.
+I got into data engineering because almost everything in tech now runs on data. Whether a product works, what a company builds next, how a bank spots a problem, all of it comes back to whether the data is there and whether you can trust it. I liked the idea of working on that part.
 
-I have been interested in that kind of problem ever since. I like it when a number stays the same when you ask for it twice. I like it when late data fixes itself instead of quietly going missing. And I like it when the pipeline tells you two systems disagree, before someone in finance has to.
+What I enjoy most is building pipelines people can rely on. Getting the same answer when you run something twice. Making sure late data still gets counted. Catching a problem in the pipeline before it turns into a wrong number in someone's report.
 
-At American Express I work on the data behind card transactions, around 1M a day. I use Spark and Hive for the batch jobs, Kafka and Flink for the authorization and settlement events, Airflow to schedule it all, and ClickHouse with Grafana so people can actually look at the numbers.
+At American Express I work on the data behind card transactions, around 1M a day. I use Spark and Hive for the batch jobs, Kafka and Flink for the authorization and settlement events, Airflow to schedule everything, and ClickHouse with Grafana so people can see the numbers.
 
 <br>
 
