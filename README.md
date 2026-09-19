@@ -1,4 +1,4 @@
-<h1 align="center">Hi, I'm Swapna 👋</h1>
+<h1 align="center">Swapna Tondapu</h1>
 
 <p align="center">
   <b>Data Engineer @ American Express</b> · Santa Clara, CA<br>
@@ -14,31 +14,31 @@
 
 ---
 
-### 🙋‍♀️ A bit about me
+### A bit about me
 
-I fell into data engineering through the unglamorous door: someone asked why a number in a report changed overnight, and I went looking. Turned out a settlement had landed four days late and quietly rewrote a day everyone thought was finished.
+I fell into data engineering through the unglamorous door: someone asked why a number in a report had changed overnight, and I went looking. A settlement had landed four days late and quietly rewritten a day everyone thought was finished.
 
-That's still the part of the job I like most. Not the dashboards — **the promise underneath them**. That the number is the same the second time you ask. That late data corrects itself instead of silently vanishing. That when two systems disagree, something tells you *before* the finance team does.
+That's still the part of the job I like most. Not the dashboards — the promise underneath them. That the number is the same the second time you ask. That late data corrects itself instead of silently vanishing. That when two systems disagree, something tells you before the finance team does.
 
-Day to day at **American Express** that means Spark and Hive over card transactions, Kafka and Flink for authorization and settlement events, Airflow holding it together, and ClickHouse + Grafana at the front so people can actually see it.
+Day to day at **American Express** that means Spark and Hive over card transactions, Kafka and Flink for authorization and settlement events, Airflow holding it together, and ClickHouse with Grafana at the front so people can actually see it.
 
 <br>
 
 <table>
 <tr><td width="50%" valign="top">
 
-**🎓 Education**
+**Education**
 
 `MS Business Analytics` — Texas A&M University
 GPA 4.0 · Aug 2022 – Dec 2023
 
-**📜 Certification**
+**Certification**
 
 `AWS Certified Data Engineer – Associate`
 
 </td><td width="50%" valign="top">
 
-**💼 Experience**
+**Experience**
 
 `Data Engineer` — **American Express**, Palo Alto
 Jan 2024 – present
@@ -51,17 +51,17 @@ Prior: **JioSaavn**
 
 ---
 
-### 🔧 What I actually work on
+### What I actually work on
 
 ```mermaid
 flowchart LR
-    A["💳 Card<br/>transactions"] -->|Kafka| B["⚡ Flink<br/>auth + settlement<br/>streams"]
-    A -->|batch| C["🔥 Spark / Hive<br/>merchant aggregation<br/>~8 TB/day"]
-    B --> D["🗄️ Delta Lake<br/>/ warehouse"]
+    A["Card<br/>transactions"] -->|Kafka| B["Flink<br/>auth + settlement<br/>streams"]
+    A -->|batch| C["Spark / Hive<br/>merchant aggregation<br/>~8 TB/day"]
+    B --> D["Delta Lake<br/>/ warehouse"]
     C --> D
-    D --> E["🔍 Presto<br/>reconciliation<br/>checks"]
-    D --> F["📊 ClickHouse<br/>+ Grafana"]
-    G["🌀 Airflow"] -.orchestrates.-> C
+    D --> E["Presto<br/>reconciliation<br/>checks"]
+    D --> F["ClickHouse<br/>+ Grafana"]
+    G["Airflow"] -.orchestrates.-> C
     G -.orchestrates.-> E
 
     style A fill:#2563eb,stroke:#1e40af,color:#fff
@@ -75,15 +75,13 @@ flowchart LR
 
 A few things I'm proud of rather than just familiar with:
 
-| | |
-|---|---|
-| ⚡ | Cut a daily merchant aggregation's runtime by **~25%** — the culprit was skewed joins, fixed by repartitioning and tuning the Spark SQL |
-| 🛡️ | Built the **Presto reconciliation checks** that catch schema drift before it reaches anyone downstream |
-| 🕰️ | Maintain an **SCD2 merchant dimension** and incremental loads that handle late-arriving settlements without rewriting history |
+- Cut a daily merchant aggregation's runtime by **~25%** — the culprit was skewed joins, fixed by repartitioning and tuning the Spark SQL
+- Built the **Presto reconciliation checks** that catch schema drift before it reaches anyone downstream
+- Maintain an **SCD2 merchant dimension** and incremental loads that handle late-arriving settlements without rewriting history
 
 ---
 
-### 🧰 Tools I reach for
+### Tools I reach for
 
 <p>
 <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white">
@@ -116,12 +114,12 @@ A few things I'm proud of rather than just familiar with:
 
 ---
 
-### 📂 Projects
+### Projects
 
 <table>
 <tr><td width="100%">
 
-#### 🏦 [merchant-settlement-dbt](https://github.com/swapnatondapu7-netizen/merchant-settlement-dbt)
+#### [merchant-settlement-dbt](https://github.com/swapnatondapu7-netizen/merchant-settlement-dbt)
 
 <a href="https://github.com/swapnatondapu7-netizen/merchant-settlement-dbt"><img src="https://img.shields.io/badge/dbt-1.12-FF694B?style=flat-square&logo=dbt&logoColor=white"></a>
 <img src="https://img.shields.io/badge/DuckDB-local-FFF000?style=flat-square&logo=duckdb&logoColor=black">
@@ -129,18 +127,18 @@ A few things I'm proud of rather than just familiar with:
 
 **The four-days-late settlement problem, modelled properly.**
 
-Authorizations and settlements arrive as two streams that refuse to line up — settlements land days late, amounts drift with tips and partial captures, and some authorizations never settle at all. Each one breaks a naive pipeline *quietly*, which is the dangerous kind.
+Authorizations and settlements arrive as two streams that refuse to line up — settlements land days late, amounts drift with tips and partial captures, and some authorizations never settle at all. Each one breaks a naive pipeline quietly, which is the dangerous kind.
 
 So I built it the way it should be built: an incremental model that reprocesses a trailing window instead of only today, an SCD2 snapshot so re-tiering a merchant doesn't rewrite last quarter, and tests that fail for the right reasons.
 
-> I proved the late-arrival logic rather than claiming it — injected a settlement arriving 4 days late and watched an already-written day correct itself from **4 open auths / $173.78 → 3 / $187.87**.
+> I proved the late-arrival logic rather than claiming it — injected a settlement arriving 4 days late and watched an already-written day correct itself from **4 open auths / $173.78** to **3 / $187.87**.
 
 </td></tr>
 </table>
 
 ---
 
-### 📈 GitHub
+### GitHub
 
 <p align="center">
   <img height="165" src="https://github-readme-stats.vercel.app/api?username=swapnatondapu7-netizen&show_icons=true&theme=tokyonight&hide_border=true&count_private=true">
