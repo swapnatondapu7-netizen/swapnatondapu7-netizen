@@ -119,9 +119,9 @@ Some things I have actually done, not just used:
 <table>
 <tr><td width="100%">
 
-#### [merchant-settlement-dbt](https://github.com/swapnatondapu7-netizen/merchant-settlement-dbt)
+#### [merchant-settlement-dbt](https://github.com/swapnatondapu7/merchant-settlement-dbt)
 
-<a href="https://github.com/swapnatondapu7-netizen/merchant-settlement-dbt"><img src="https://img.shields.io/badge/dbt-1.12-FF694B?style=flat-square&logo=dbt&logoColor=white"></a>
+<a href="https://github.com/swapnatondapu7/merchant-settlement-dbt"><img src="https://img.shields.io/badge/dbt-1.12-FF694B?style=flat-square&logo=dbt&logoColor=white"></a>
 <img src="https://img.shields.io/badge/DuckDB-local-FFF000?style=flat-square&logo=duckdb&logoColor=black">
 <img src="https://img.shields.io/badge/tests-33%20passing-2ea44f?style=flat-square">
 
@@ -136,9 +136,9 @@ So the model goes back over the last few days each run instead of only today, ke
 </td></tr>
 <tr><td width="100%">
 
-#### [streaming-recon](https://github.com/swapnatondapu7-netizen/streaming-recon)
+#### [streaming-recon](https://github.com/swapnatondapu7/streaming-recon)
 
-<a href="https://github.com/swapnatondapu7-netizen/streaming-recon"><img src="https://img.shields.io/badge/Apache%20Flink-1.20-E6526F?style=flat-square&logo=apacheflink&logoColor=white"></a>
+<a href="https://github.com/swapnatondapu7/streaming-recon"><img src="https://img.shields.io/badge/Apache%20Flink-1.20-E6526F?style=flat-square&logo=apacheflink&logoColor=white"></a>
 <img src="https://img.shields.io/badge/Kafka-3.8-231F20?style=flat-square&logo=apachekafka&logoColor=white">
 <img src="https://img.shields.io/badge/checks-7%2F7%20passing-2ea44f?style=flat-square">
 
@@ -151,9 +151,9 @@ Two Kafka streams that do not line up, matched in Flink SQL on event time. An in
 </td></tr>
 <tr><td width="100%">
 
-#### [schema-matcher](https://github.com/swapnatondapu7-netizen/schema-matcher)
+#### [schema-matcher](https://github.com/swapnatondapu7/schema-matcher)
 
-<a href="https://github.com/swapnatondapu7-netizen/schema-matcher"><img src="https://img.shields.io/badge/sentence--transformers-MiniLM-FFD21E?style=flat-square"></a>
+<a href="https://github.com/swapnatondapu7/schema-matcher"><img src="https://img.shields.io/badge/sentence--transformers-MiniLM-FFD21E?style=flat-square"></a>
 <img src="https://img.shields.io/badge/CPU%20only-no%20API%20key-2ea44f?style=flat-square">
 <img src="https://img.shields.io/badge/26%2F36%20right-1%20wrong-blue?style=flat-square">
 
@@ -166,9 +166,9 @@ Every partner sends the same facts under different column names, and somebody ma
 </td></tr>
 <tr><td width="100%">
 
-#### [pipeline-anomaly](https://github.com/swapnatondapu7-netizen/pipeline-anomaly)
+#### [pipeline-anomaly](https://github.com/swapnatondapu7/pipeline-anomaly)
 
-<a href="https://github.com/swapnatondapu7-netizen/pipeline-anomaly"><img src="https://img.shields.io/badge/scikit--learn-1.7-F7931E?style=flat-square&logo=scikitlearn&logoColor=white"></a>
+<a href="https://github.com/swapnatondapu7/pipeline-anomaly"><img src="https://img.shields.io/badge/scikit--learn-1.7-F7931E?style=flat-square&logo=scikitlearn&logoColor=white"></a>
 <img src="https://img.shields.io/badge/pandas-2.3-150458?style=flat-square&logo=pandas&logoColor=white">
 <img src="https://img.shields.io/badge/9%2F9%20caught-3%20false%20alarms%2Fwk-2ea44f?style=flat-square">
 
@@ -181,9 +181,9 @@ A crash is easy, someone gets paged. The expensive one reports success after loa
 </td></tr>
 <tr><td width="100%">
 
-#### [spark-skew](https://github.com/swapnatondapu7-netizen/spark-skew)
+#### [spark-skew](https://github.com/swapnatondapu7/spark-skew)
 
-<a href="https://github.com/swapnatondapu7-netizen/spark-skew"><img src="https://img.shields.io/badge/Apache%20Spark-3.5.3-E25A1C?style=flat-square&logo=apachespark&logoColor=white"></a>
+<a href="https://github.com/swapnatondapu7/spark-skew"><img src="https://img.shields.io/badge/Apache%20Spark-3.5.3-E25A1C?style=flat-square&logo=apachespark&logoColor=white"></a>
 <img src="https://img.shields.io/badge/20M%20rows-55%25%20on%20one%20key-blue?style=flat-square">
 <img src="https://img.shields.io/badge/median%20of%203-warm--up%20discarded-2ea44f?style=flat-square">
 
@@ -196,9 +196,9 @@ Four fixes for a skewed join, measured properly. My first benchmark ran each str
 </td></tr>
 <tr><td width="100%">
 
-#### [airflow-idempotent](https://github.com/swapnatondapu7-netizen/airflow-idempotent)
+#### [airflow-idempotent](https://github.com/swapnatondapu7/airflow-idempotent)
 
-<a href="https://github.com/swapnatondapu7-netizen/airflow-idempotent"><img src="https://img.shields.io/badge/Apache%20Airflow-2.10.5-017CEE?style=flat-square&logo=apacheairflow&logoColor=white"></a>
+<a href="https://github.com/swapnatondapu7/airflow-idempotent"><img src="https://img.shields.io/badge/Apache%20Airflow-2.10.5-017CEE?style=flat-square&logo=apacheairflow&logoColor=white"></a>
 <img src="https://img.shields.io/badge/DuckDB-1.1-FFF000?style=flat-square&logo=duckdb&logoColor=black">
 <img src="https://img.shields.io/badge/rerun-%24123%2C257%20vs%20%2461%2C628-critical?style=flat-square">
 
@@ -211,9 +211,9 @@ Reruns are routine: retries, backfills, late data, a cleared task. So the questi
 </td></tr>
 <tr><td width="100%">
 
-#### [clickhouse-dashboards](https://github.com/swapnatondapu7-netizen/clickhouse-dashboards)
+#### [clickhouse-dashboards](https://github.com/swapnatondapu7/clickhouse-dashboards)
 
-<a href="https://github.com/swapnatondapu7-netizen/clickhouse-dashboards"><img src="https://img.shields.io/badge/ClickHouse-24.8-FFCC01?style=flat-square&logo=clickhouse&logoColor=black"></a>
+<a href="https://github.com/swapnatondapu7/clickhouse-dashboards"><img src="https://img.shields.io/badge/ClickHouse-24.8-FFCC01?style=flat-square&logo=clickhouse&logoColor=black"></a>
 <img src="https://img.shields.io/badge/Grafana-11.2-F46800?style=flat-square&logo=grafana&logoColor=white">
 <img src="https://img.shields.io/badge/checks-7%2F7%20passing-2ea44f?style=flat-square">
 
