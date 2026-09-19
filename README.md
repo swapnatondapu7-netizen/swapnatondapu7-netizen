@@ -179,6 +179,36 @@ A crash is easy, someone gets paged. The expensive one reports success after loa
 > Scored the way you would actually judge it: what got caught, how long it took, and how many false alarms a week. Waiting three hours before alerting took false alarms from 20 a week to 3. An Isolation Forest found no more than the medians did, at 91 a week, and the README says so.
 
 </td></tr>
+<tr><td width="100%">
+
+#### [spark-skew](https://github.com/swapnatondapu7-netizen/spark-skew)
+
+<a href="https://github.com/swapnatondapu7-netizen/spark-skew"><img src="https://img.shields.io/badge/Apache%20Spark-3.5.3-E25A1C?style=flat-square&logo=apachespark&logoColor=white"></a>
+<img src="https://img.shields.io/badge/20M%20rows-55%25%20on%20one%20key-blue?style=flat-square">
+<img src="https://img.shields.io/badge/median%20of%203-warm--up%20discarded-2ea44f?style=flat-square">
+
+**One merchant owns 11M of 20M rows, so one task does half the job.**
+
+Four fixes for a skewed join, measured properly. My first benchmark ran each strategy once and produced a beautiful staircase that was mostly page cache, so it now discards a warm-up run and takes the median of three.
+
+> The honest result: salting and AQE both removed the skew, taking the worst task from 10.5x the median down to 4.2x and 2.4x, and neither made it faster on one machine. Broadcasting the small dimension skipped the shuffle and was 60% faster. Reported as found rather than tuned until salting looked good.
+
+</td></tr>
+<tr><td width="100%">
+
+#### [airflow-idempotent](https://github.com/swapnatondapu7-netizen/airflow-idempotent)
+
+<a href="https://github.com/swapnatondapu7-netizen/airflow-idempotent"><img src="https://img.shields.io/badge/Apache%20Airflow-2.10.5-017CEE?style=flat-square&logo=apacheairflow&logoColor=white"></a>
+<img src="https://img.shields.io/badge/DuckDB-1.1-FFF000?style=flat-square&logo=duckdb&logoColor=black">
+<img src="https://img.shields.io/badge/rerun-%24123%2C257%20vs%20%2461%2C628-critical?style=flat-square">
+
+**The DAG that doubles your revenue if you run it twice.**
+
+Reruns are routine: retries, backfills, late data, a cleared task. So the question is not whether a loading task works, it is what happens the second time.
+
+> Two real DAGs. The one that appends turned $61,628.90 of settlements into $123,257.80 on a rerun, with no failure and no alert. The safe one deletes its own partition and rewrites it in a single transaction, and does not move.
+
+</td></tr>
 </table>
 
 ---
