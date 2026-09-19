@@ -164,6 +164,21 @@ Every partner sends the same facts under different column names, and somebody ma
 > The important part is that it is allowed to say it does not know. A wrong mapping is silent and turns up in a report later, so the threshold is chosen with an explicit 10:1 cost of a wrong answer against a human review.
 
 </td></tr>
+<tr><td width="100%">
+
+#### [pipeline-anomaly](https://github.com/swapnatondapu7-netizen/pipeline-anomaly)
+
+<a href="https://github.com/swapnatondapu7-netizen/pipeline-anomaly"><img src="https://img.shields.io/badge/scikit--learn-1.7-F7931E?style=flat-square&logo=scikitlearn&logoColor=white"></a>
+<img src="https://img.shields.io/badge/pandas-2.3-150458?style=flat-square&logo=pandas&logoColor=white">
+<img src="https://img.shields.io/badge/9%2F9%20caught-3%20false%20alarms%2Fwk-2ea44f?style=flat-square">
+
+**Catching the job that succeeds and loads half the data.**
+
+A crash is easy, someone gets paged. The expensive one reports success after loading 40% of the rows. Volume moves with the hour, the weekday and month end, so a fixed threshold either fires every night or catches nothing.
+
+> Scored the way you would actually judge it: what got caught, how long it took, and how many false alarms a week. Waiting three hours before alerting took false alarms from 20 a week to 3. An Isolation Forest found no more than the medians did, at 91 a week, and the README says so.
+
+</td></tr>
 </table>
 
 ---
