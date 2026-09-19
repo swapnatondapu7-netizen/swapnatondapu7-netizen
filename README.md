@@ -2,7 +2,7 @@
 
 <p align="center">
   <b>Data Engineer @ American Express</b> · Santa Clara, CA<br>
-  I keep the pipelines behind <b>~1M card transactions and ~8 TB a day</b> honest.
+  I work on the data pipelines behind about <b>1M card transactions a day</b>.
 </p>
 
 <p align="center">
@@ -16,11 +16,11 @@
 
 ### A bit about me
 
-I fell into data engineering through the unglamorous door: someone asked why a number in a report had changed overnight, and I went looking. A settlement had landed four days late and quietly rewritten a day everyone thought was finished.
+One morning someone asked me why a number in a report was different from the day before. Nobody had changed anything. I went digging and found the reason: a settlement had arrived four days late, and it belonged to a day we had already reported. So the old number was never wrong exactly, it was just incomplete, and nothing had told us.
 
-That's still the part of the job I like most. Not the dashboards — the promise underneath them. That the number is the same the second time you ask. That late data corrects itself instead of silently vanishing. That when two systems disagree, something tells you before the finance team does.
+I have been interested in that kind of problem ever since. I like it when a number stays the same when you ask for it twice. I like it when late data fixes itself instead of quietly going missing. And I like it when the pipeline tells you two systems disagree, before someone in finance has to.
 
-Day to day at **American Express** that means Spark and Hive over card transactions, Kafka and Flink for authorization and settlement events, Airflow holding it together, and ClickHouse with Grafana at the front so people can actually see it.
+At American Express I work on the data behind card transactions, around 1M a day. I use Spark and Hive for the batch jobs, Kafka and Flink for the authorization and settlement events, Airflow to schedule it all, and ClickHouse with Grafana so people can actually look at the numbers.
 
 <br>
 
@@ -73,11 +73,11 @@ flowchart LR
     style G fill:#017cee,stroke:#1e40af,color:#fff
 ```
 
-A few things I'm proud of rather than just familiar with:
+Some things I have actually done, not just used:
 
-- Cut a daily merchant aggregation's runtime by **~25%** — the culprit was skewed joins, fixed by repartitioning and tuning the Spark SQL
-- Built the **Presto reconciliation checks** that catch schema drift before it reaches anyone downstream
-- Maintain an **SCD2 merchant dimension** and incremental loads that handle late-arriving settlements without rewriting history
+- Made a daily merchant job about **25% faster**. The problem was skewed joins, so I repartitioned the data and tuned the Spark SQL.
+- Wrote the **Presto checks** that catch a schema change before it reaches the teams using the data.
+- Look after an **SCD2 merchant table** and the incremental loads, so late settlements get counted without rewriting old history.
 
 ---
 
@@ -125,13 +125,13 @@ A few things I'm proud of rather than just familiar with:
 <img src="https://img.shields.io/badge/DuckDB-local-FFF000?style=flat-square&logo=duckdb&logoColor=black">
 <img src="https://img.shields.io/badge/tests-33%20passing-2ea44f?style=flat-square">
 
-**The four-days-late settlement problem, modelled properly.**
+**The late settlement problem, built in dbt.**
 
-Authorizations and settlements arrive as two streams that refuse to line up — settlements land days late, amounts drift with tips and partial captures, and some authorizations never settle at all. Each one breaks a naive pipeline quietly, which is the dangerous kind.
+Authorizations and settlements come in as two separate streams that do not match up. Settlements can be days late, the amount can change because of tips, and some authorizations never settle at all. None of these throw an error. They just make the number wrong.
 
-So I built it the way it should be built: an incremental model that reprocesses a trailing window instead of only today, an SCD2 snapshot so re-tiering a merchant doesn't rewrite last quarter, and tests that fail for the right reasons.
+So the model goes back over the last few days each run instead of only today, keeps merchant history with a snapshot so changing a merchant does not change last quarter's numbers, and has tests that only fail when something is really wrong.
 
-> I proved the late-arrival logic rather than claiming it — injected a settlement arriving 4 days late and watched an already-written day correct itself from **4 open auths / $173.78** to **3 / $187.87**.
+> I checked that this actually works instead of assuming it. I added a settlement that arrived 4 days late, ran the model again, and the old day corrected itself from **4 unsettled / $173.78** to **3 / $187.87**.
 
 </td></tr>
 </table>
@@ -145,19 +145,19 @@ So I built it the way it should be built: an incremental model that reprocesses 
 
 **Closing the dbt gap**
 
-Expressing the transformation, DAG and testing work I do by hand in dbt — models, snapshots and tests rather than three separate systems.
+Doing the transformations, dependencies and tests I already do by hand, but in dbt, where they live in one place.
 
 </td><td width="33%" valign="top" align="center">
 
 **Streaming reconciliation**
 
-Taking the auth-vs-settlement problem upstream: event-time windows, watermarks, and what to do with the event that arrives late.
+The same auth and settlement problem, but on the stream side: time windows, watermarks, and what to do when an event shows up late.
 
 </td><td width="33%" valign="top" align="center">
 
 **Data contracts**
 
-Tests that fail for the right reasons. A check that fires on correct data teaches people to ignore checks.
+Writing tests that only fail when data is really wrong. If a test keeps failing on good data, people stop reading it.
 
 </td></tr>
 </table>
