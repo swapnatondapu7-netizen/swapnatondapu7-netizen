@@ -134,6 +134,21 @@ So the model goes back over the last few days each run instead of only today, ke
 > I checked that this actually works instead of assuming it. I added a settlement that arrived 4 days late, ran the model again, and the old day corrected itself from **4 unsettled / $173.78** to **3 / $187.87**.
 
 </td></tr>
+<tr><td width="100%">
+
+#### [streaming-recon](https://github.com/swapnatondapu7-netizen/streaming-recon)
+
+<a href="https://github.com/swapnatondapu7-netizen/streaming-recon"><img src="https://img.shields.io/badge/Apache%20Flink-1.20-E6526F?style=flat-square&logo=apacheflink&logoColor=white"></a>
+<img src="https://img.shields.io/badge/Kafka-3.8-231F20?style=flat-square&logo=apachekafka&logoColor=white">
+<img src="https://img.shields.io/badge/checks-7%2F7%20passing-2ea44f?style=flat-square">
+
+**The same problem, but on the stream side.**
+
+Two Kafka streams that do not line up, matched in Flink SQL on event time. An interval join so the job does not have to remember both sides forever, and LEFT joins so the transactions that never match get reported instead of quietly disappearing.
+
+> It found all 5 authorizations that never settled and all 3 settlements with no authorization, and still matched a settlement that arrived **6 days late**. `./run.sh` goes from an empty Docker to 7/7 checks in about two minutes.
+
+</td></tr>
 </table>
 
 ---
@@ -149,9 +164,9 @@ Doing the transformations, dependencies and tests I already do by hand, but in d
 
 </td><td width="33%" valign="top" align="center">
 
-**Streaming reconciliation**
+**Backfills that do not hurt**
 
-The same auth and settlement problem, but on the stream side: time windows, watermarks, and what to do when an event shows up late.
+Reprocessing a month of history without taking the pipeline down or double counting anything. Mostly a question of making jobs safe to run twice.
 
 </td><td width="33%" valign="top" align="center">
 
