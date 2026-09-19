@@ -149,6 +149,21 @@ Two Kafka streams that do not line up, matched in Flink SQL on event time. An in
 > It found all 5 authorizations that never settled and all 3 settlements with no authorization, and still matched a settlement that arrived **6 days late**. `./run.sh` goes from an empty Docker to 7/7 checks in about two minutes.
 
 </td></tr>
+<tr><td width="100%">
+
+#### [schema-matcher](https://github.com/swapnatondapu7-netizen/schema-matcher)
+
+<a href="https://github.com/swapnatondapu7-netizen/schema-matcher"><img src="https://img.shields.io/badge/sentence--transformers-MiniLM-FFD21E?style=flat-square"></a>
+<img src="https://img.shields.io/badge/CPU%20only-no%20API%20key-2ea44f?style=flat-square">
+<img src="https://img.shields.io/badge/26%2F36%20right-1%20wrong-blue?style=flat-square">
+
+**Using a model for the boring half of onboarding a feed.**
+
+Every partner sends the same facts under different column names, and somebody maps them by hand. This does the first pass with embeddings, comparing what is *in* a column as well as what it is called, so a column named `COL_7` still gets recognised from its values.
+
+> The important part is that it is allowed to say it does not know. A wrong mapping is silent and turns up in a report later, so the threshold is chosen with an explicit 10:1 cost of a wrong answer against a human review.
+
+</td></tr>
 </table>
 
 ---
