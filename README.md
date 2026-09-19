@@ -209,6 +209,21 @@ Reruns are routine: retries, backfills, late data, a cleared task. So the questi
 > Two real DAGs. The one that appends turned $61,628.90 of settlements into $123,257.80 on a rerun, with no failure and no alert. The safe one deletes its own partition and rewrites it in a single transaction, and does not move.
 
 </td></tr>
+<tr><td width="100%">
+
+#### [clickhouse-dashboards](https://github.com/swapnatondapu7-netizen/clickhouse-dashboards)
+
+<a href="https://github.com/swapnatondapu7-netizen/clickhouse-dashboards"><img src="https://img.shields.io/badge/ClickHouse-24.8-FFCC01?style=flat-square&logo=clickhouse&logoColor=black"></a>
+<img src="https://img.shields.io/badge/Grafana-11.2-F46800?style=flat-square&logo=grafana&logoColor=white">
+<img src="https://img.shields.io/badge/checks-7%2F7%20passing-2ea44f?style=flat-square">
+
+**The same dashboard query, 3,052 times cheaper.**
+
+Two tables holding identical 50M rows with a different `ORDER BY`, plus a materialized view. The same panel query reads 50,000,000 rows, 131,072, or 16,384 depending only on decisions made before any data was loaded.
+
+> The headline is rows read from `system.query_log`, not milliseconds, because wall time on a laptop flatters you. There is also a check that the view's totals match the raw table to the cent, since a fast wrong dashboard is worse than a slow one.
+
+</td></tr>
 </table>
 
 ---
